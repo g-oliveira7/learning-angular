@@ -1,6 +1,6 @@
 <section>
     <h3>Interpolation and Property binding</h3>
-    
+
     <article>
         <p>
             Lista de cursos do <a [href]="nomePortal" target="_blank">portal da Loiane Groner</a>
@@ -18,7 +18,7 @@
     <h3>Property binding: class and style</h3>
 
     <article>
-        <select class="form-select select01" #tipoAlert (change)="0">
+        <select class="form-select mb-2" #tipoAlert (change)="0">
             <option value="" selected>Selecione um tipo...</option>
             <option *ngFor="let tipo of tiposAlert; index as i" [value]="tipo">
                 {{ tipo.toUpperCase() }}
@@ -27,11 +27,34 @@
 
         <div class="alert" [class.alert-success]="tipoAlert.value == 'success'"
             [style.display]="tipoAlert.value=='success' ? 'block' : 'none'">
-            <p>Uma mensagem de successo </p>
+            <p class="m-0">Uma mensagem de successo </p>
         </div>
 
-        <ngb-alert *ngIf="tipoAlert.value" [type]="tipoAlert.value">
+        <ngb-alert *ngIf="tipoAlert.value" [type]="tipoAlert.value" (closed)="tipoAlert.value = ''">
             Uma mensagem qualquer.
         </ngb-alert>
+    </article>
+</section>
+
+<section>
+    <h3>Event binding</h3>
+
+    <article>
+        <button class="btn btn-primary mt-2" (click)="handleClick(modal)">
+            Click me
+        </button>
+
+        <ng-template #modal let-modal>
+            <div class="modal-header">
+                <h4 class="modal-title">Hi there!</h4>
+                <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+            </div>
+            <div class="modal-body">
+                <p>The button was clicked!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" (click)="modal.dismiss()">Close</button>
+            </div>
+        </ng-template>
     </article>
 </section>
