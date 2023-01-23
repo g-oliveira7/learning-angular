@@ -14,7 +14,7 @@ import {
 @Component({
   selector: 'app-lifecycle-hook',
   templateUrl: './lifecycle-hook.component.html',
-  styleUrls: ['./lifecycle-hook.component.css']
+  styleUrls: ['./lifecycle-hook.component.scss']
 })
 export class LifecycleHookComponent implements OnInit,
   OnChanges,

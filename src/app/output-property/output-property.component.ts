@@ -3,7 +3,7 @@ import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular
 @Component({
   selector: 'app-counter',
   templateUrl: './output-property.component.html',
-  styleUrls: ['./output-property.component.css']
+  styleUrls: ['./output-property.component.scss']
 })
 export class OutputPropertyComponent {
   // valor: number = 0;
