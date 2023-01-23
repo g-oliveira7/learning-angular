@@ -1,3 +1,7 @@
-<h1>{{ title }}</h1>
+<p>
+    Lista de cursos do <a [href]="nomePortal" target="_blank">portal da Loiane Groner</a>
+</p>
 
-<app-curso-detalhe></app-curso-detalhe>
+<ul>
+    <li *ngFor="let curso of cursos">{{ curso }}</li>
+</ul>
