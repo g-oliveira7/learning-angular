@@ -1,7 +1,7 @@
 <section>
+    <article>
     <h3>Interpolation and Property binding</h3>
 
-    <article>
         <p>
             Lista de cursos do <a [href]="nomePortal" target="_blank">portal da Loiane Groner</a>
         </p>
@@ -15,9 +15,9 @@
 </section>
 
 <section>
+    <article>
     <h3>Property binding: class and style</h3>
 
-    <article>
         <select class="form-select mb-2" #tipoAlert (change)="0">
             <option value="" selected>Selecione um tipo...</option>
             <option *ngFor="let tipo of tiposAlert; index as i" [value]="tipo">
@@ -37,9 +37,9 @@
 </section>
 
 <section>
+    <article>
     <h3>Event binding</h3>
 
-    <article>
         <button class="btn btn-primary mt-2" (click)="handleClick(modal)">
             Click me
         </button>
@@ -56,5 +56,19 @@
                 <button type="button" class="btn btn-outline-dark" (click)="modal.dismiss()">Close</button>
             </div>
         </ng-template>
+    </article>
+</section>
+
+<section>
+    <article>
+        <h3>Two-way data binding</h3>
+
+        <div>
+            <label for="name">Name</label>
+            <input type="text" [(ngModel)]="pessoa.nome" class="form-control mb-2">
+            <label for="lastname">Lastname</label>
+            <input type="text" [(ngModel)]="pessoa.sobrenome" class="form-control mb-2">
+            <p>Fullname is: <span class="text-primary">{{ fullname() }}</span></p>
+        </div>
     </article>
 </section>

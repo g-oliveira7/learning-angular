@@ -11,6 +11,7 @@ export class CursosComponent {
   nomePortal: string;
   cursos: string[];
   tiposAlert: string[];
+  pessoa = {nome: '', sobrenome: ''}
 
   constructor(private cursosService: CursosService,
     private modalService: NgbModal) {
@@ -23,5 +24,9 @@ export class CursosComponent {
     this.modalService.open(content, {
       backdrop: 'static'
     })
+  }
+
+  fullname() {
+    return `${this.pessoa.nome} ${this.pessoa.sobrenome}`
   }
 }

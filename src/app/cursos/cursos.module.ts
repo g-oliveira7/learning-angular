@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CursosComponent } from './cursos.component';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,7 +15,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     CommonModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   exports: [
     CursosComponent
