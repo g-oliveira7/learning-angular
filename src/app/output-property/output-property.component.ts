@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -6,19 +6,21 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./output-property.component.css']
 })
 export class OutputPropertyComponent {
-  valor: number = 0;
+  // valor: number = 0;
   
   @Output() mudouValor = new EventEmitter()
 
+  @ViewChild('displayValue') inputValorDisplay!: ElementRef
+
   increase() {
-    this.valor++;
-    this.mudouValor.emit({ valorAtual: this.valor })
+    this.inputValorDisplay.nativeElement.value++
+    this.mudouValor.emit({ valorAtual: this.inputValorDisplay.nativeElement.value })
   }
 
   decrease() {
-    if (this.valor > 0) {
-      this.valor--;
-      this.mudouValor.emit({ valorAtual: this.valor })
+    if (this.inputValorDisplay.nativeElement.value > 0) {
+      this.inputValorDisplay.nativeElement.value--;
+      this.mudouValor.emit({ valorAtual: this.inputValorDisplay.nativeElement.value })
     }
   }
 }
