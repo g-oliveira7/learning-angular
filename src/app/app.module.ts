@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { OutputPropertyComponent } from './output-property/output-property.component';
+import { LifecycleHookComponent } from './lifecycle-hook/lifecycle-hook.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
-    OutputPropertyComponent
+    OutputPropertyComponent,
+    LifecycleHookComponent
   ],
   imports: [
     BrowserModule,
