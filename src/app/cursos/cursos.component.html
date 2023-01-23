@@ -8,7 +8,7 @@
 
         <ul>
             <li *ngFor="let curso of cursos">
-                {{ curso }}
+                <app-curso [nome]="curso"></app-curso>
             </li>
         </ul>
     </article>

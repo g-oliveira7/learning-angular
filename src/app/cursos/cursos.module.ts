@@ -1,3 +1,4 @@
+import { InputPropertyComponent } from './../input-property/input-property.component';
 import { CursosService } from './cursos.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,7 +12,8 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     CursosComponent,
-    CursoDetalheComponent
+    CursoDetalheComponent,
+    InputPropertyComponent
   ],
   imports: [
     CommonModule,
