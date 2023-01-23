@@ -9,9 +9,11 @@ import { Component } from '@angular/core';
 export class CursosComponent {
   nomePortal: string;
   cursos: string[];
+  tiposAlert: string[];
 
   constructor(private cursosService: CursosService) {
     this.nomePortal = 'http://loiane.training'
     this.cursos = this.cursosService.getCursos()
+    this.tiposAlert = ['success', 'info', 'warning', 'danger', 'primary', 'secondary', 'light', 'dark']
   }
 }
