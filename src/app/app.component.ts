@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hello World';
+
+  onMudouValor(event: Event) {
+    console.log(event)
+  }
 }

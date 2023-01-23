@@ -5,12 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { InputPropertyComponent } from './input-property/input-property.component';
+import { OutputPropertyComponent } from './output-property/output-property.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponent
+    FirstComponent,
+    OutputPropertyComponent
   ],
   imports: [
     BrowserModule,

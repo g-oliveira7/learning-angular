@@ -1,0 +1,8 @@
+.display {
+    width: 4em;
+    text-align: center;
+}
+
+.counter {
+    display: flex;
+}
