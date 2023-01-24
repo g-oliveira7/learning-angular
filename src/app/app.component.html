@@ -2,10 +2,80 @@
   {{ title }}
 </h1>
 
-<first-component></first-component>
+<section>
+  <h2>Bootstrap switch widget for angular</h2>
 
-<app-cursos></app-cursos>
+  <ul ngbNav #nav="ngbNav" class="nav-tabs">
+    <li [ngbNavItem]="1">
+      <a ngbNavLink>First Component</a>
+      <ng-template ngbNavContent>
+        <first-component></first-component>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink>Cursos</a>
+      <ng-template ngbNavContent>
+        <app-cursos></app-cursos>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="3">
+      <a ngbNavLink>Lifecycle Hooks</a>
+      <ng-template ngbNavContent>
+        <app-lifecycle-hook></app-lifecycle-hook>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="4">
+      <a ngbNavLink>Counter</a>
+      <ng-template ngbNavContent>
+        <app-counter (mudouValor)="onMudouValor($event)"></app-counter>
+      </ng-template>
+    </li>
+  </ul>
 
-<app-counter (mudouValor)="onMudouValor($event)"></app-counter>
+  <div [ngbNavOutlet]="nav" class="container mt-2"></div>
+</section>
 
-<app-lifecycle-hook></app-lifecycle-hook>
+
+<section>
+  <h2>Without swicth widget Bootstrap</h2>
+
+  <div class="nav navbar-expand navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a href="/" class="navbar-brand">
+        <span></span>
+      </a>
+
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav my-2">
+          <li class="nav-item mx-2">
+            <a class="nav-link cursor-pointer" [class.active]="currentAba == 1" (click)="currentAba = 1">
+              First Component
+            </a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" [class.active]="currentAba == 2" (click)="currentAba = 2">
+              Cursos
+            </a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" [class.active]="currentAba == 3" (click)="currentAba = 3">
+              Lifecycle Hooks
+            </a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" [class.active]="currentAba == 4" (click)="currentAba = 4">
+              Counter
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container mt-2" [ngSwitch]="currentAba">
+    <first-component *ngSwitchDefault></first-component>
+    <app-cursos *ngSwitchCase="2"></app-cursos>
+    <app-lifecycle-hook *ngSwitchCase="3"></app-lifecycle-hook>
+    <app-counter *ngSwitchCase="4" (mudouValor)="onMudouValor($event)"></app-counter>
+  </div>
+</section>
