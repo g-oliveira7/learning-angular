@@ -1,0 +1,11 @@
+<h3>NgStyle directive</h3>
+
+<div class="container mb-5">
+    <button class="btn btn-secondary" (click)="decreaseSize()">Decrease Size</button>
+    <span class="text-warning bi bi-star-fill mx-5"
+        [ngStyle]="{ 'fontSize': size + 'em' }"></span>
+    <button class="btn btn-success" (click)="increaseSize()">Increase Size</button>
+
+    <p *ngIf="size == maxSize" class="text-danger fw-bold">Max size</p>
+    <p *ngIf="size == 1" class="text-danger fw-bold">Min size</p>
+</div>

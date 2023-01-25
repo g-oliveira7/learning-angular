@@ -30,6 +30,13 @@
         <app-counter (mudouValor)="onMudouValor($event)"></app-counter>
       </ng-template>
     </li>
+    <li [ngbNavItem]="5">
+      <a ngbNavLink>NgClass and NgStyle directives</a>
+      <ng-template ngbNavContent>
+        <app-ngclass-directive></app-ngclass-directive>
+        <app-ngstyle-directive></app-ngstyle-directive>
+      </ng-template>
+    </li>
   </ul>
 
   <div [ngbNavOutlet]="nav" class="container mt-2"></div>
@@ -67,6 +74,11 @@
               Counter
             </a>
           </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" [class.active]="currentAba == 5" (click)="currentAba = 5">
+              NgClass and NgStyle directives
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -77,5 +89,7 @@
     <app-cursos *ngSwitchCase="2"></app-cursos>
     <app-lifecycle-hook *ngSwitchCase="3"></app-lifecycle-hook>
     <app-counter *ngSwitchCase="4" (mudouValor)="onMudouValor($event)"></app-counter>
+    <app-ngclass-directive *ngSwitchCase="5"></app-ngclass-directive>
+    <app-ngstyle-directive *ngSwitchCase="5"></app-ngstyle-directive>
   </div>
 </section>

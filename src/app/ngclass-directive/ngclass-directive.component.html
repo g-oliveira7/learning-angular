@@ -1,0 +1,10 @@
+<h3>NgClass directive</h3>
+
+<div class="container mb-5">
+    <span class="text-warning bi"
+        [ngClass]="{
+            'bi-star-fill': fill,
+            'bi-star': !fill
+        }"
+        (click)="onClick()"></span>
+</div>
