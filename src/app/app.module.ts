@@ -9,6 +9,8 @@ import { OutputPropertyComponent } from './output-property/output-property.compo
 import { LifecycleHookComponent } from './lifecycle-hook/lifecycle-hook.component';
 import { NgstyleDirectiveComponent } from './ngstyle-directive/ngstyle-directive.component';
 import { NgclassDirectiveComponent } from './ngclass-directive/ngclass-directive.component';
+import { CustomizedDirectivesComponent } from './customized-directives/customized-directives.component';
+import { YellowBackgroundDirective } from './directives/yellow-background.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { NgclassDirectiveComponent } from './ngclass-directive/ngclass-directive
     OutputPropertyComponent,
     LifecycleHookComponent,
     NgstyleDirectiveComponent,
-    NgclassDirectiveComponent
+    NgclassDirectiveComponent,
+    CustomizedDirectivesComponent,
+    YellowBackgroundDirective
   ],
   imports: [
     BrowserModule,
