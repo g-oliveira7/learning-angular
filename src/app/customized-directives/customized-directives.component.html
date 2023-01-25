@@ -24,3 +24,11 @@
     </div>
     <p class="mt-2" highlight [defaultColor]="default.value" [customColor]="custom.value">Some text for the custom background highlight</p>
 </section>
+
+<section>
+    <h3 class="mt-5">Structure directive</h3>
+    <p>Condition: {{ myCondition }}</p>
+    <p *ngElse="myCondition">Else, show this</p>
+
+    <button class="btn btn-primary" (click)="myCondition=!myCondition">Invert condition</button>
+</section>

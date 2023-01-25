@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./customized-directives.component.scss']
 })
 export class CustomizedDirectivesComponent {
-
+  myCondition = true
 }
