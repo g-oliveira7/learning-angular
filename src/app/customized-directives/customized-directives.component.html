@@ -6,7 +6,21 @@
 </section>
 
 <section>
-    <h3 class="mt-5">Hightlight mouse - Blue background</h3>
+    <h3 class="mt-5">Highlight mouse - Blue background</h3>
 
     <p highlightMouse>Some text for the highlight when mouse is passing</p>
+</section>
+
+<section>
+    <h3 class="mt-5">Highlight - Input and property binding</h3>
+
+    <div>
+        <label class="me-3" for="default-color">Default Background Color</label>
+        <input type="color" #default value="#ffffff">
+    </div>
+    <div>
+        <label class="me-3" for="custom-color">Custom Background Color</label>
+        <input type="color" #custom value="#00ff00">
+    </div>
+    <p class="mt-2" highlight [defaultColor]="default.value" [customColor]="custom.value">Some text for the custom background highlight</p>
 </section>

@@ -12,6 +12,7 @@ import { NgclassDirectiveComponent } from './ngclass-directive/ngclass-directive
 import { CustomizedDirectivesComponent } from './customized-directives/customized-directives.component';
 import { YellowBackgroundDirective } from './directives/yellow-background.directive';
 import { HighlightMouseDirective} from './directives/highlight-mouse.directive';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HighlightMouseDirective} from './directives/highlight-mouse.directive';
     NgclassDirectiveComponent,
     CustomizedDirectivesComponent,
     YellowBackgroundDirective,
-    HighlightMouseDirective
+    HighlightMouseDirective,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
