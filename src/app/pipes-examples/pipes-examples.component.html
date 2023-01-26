@@ -45,3 +45,12 @@
         <li *ngFor="let c of cursos | arrayFilterImpure:filtro">{{ c }}</li>
     </ul>
 </section>
+
+<section>
+    <h3>Correct form is without pipes</h3>
+    <hr>
+
+    <ul>
+        <li *ngFor="let c of getCursos()">{{ c }}</li>
+    </ul>
+</section>

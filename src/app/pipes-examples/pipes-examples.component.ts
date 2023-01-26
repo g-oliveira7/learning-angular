@@ -22,4 +22,12 @@ export class PipesExamplesComponent {
   addCource(courseName: string): void {
     this.cursos.push(courseName)
   }
+
+  getCursos() {
+    if (this.cursos.length === 0 || this.filtro === undefined || this.filtro.trim() === '') {
+      return this.cursos
+    }
+
+    return this.cursos.filter(curso => curso.indexOf(this.filtro) != -1)
+  }
 }
