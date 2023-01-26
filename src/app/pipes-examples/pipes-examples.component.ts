@@ -12,6 +12,6 @@ export class PipesExamplesComponent {
     data: new Date(2012, 8, 24),
     paginas: 408,
     avaliacao: 4.81234,
-    preco: 44.90
+    preco: 4400.90
   };
 }

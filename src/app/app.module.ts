@@ -15,6 +15,7 @@ import { HighlightMouseDirective} from './directives/highlight-mouse.directive';
 import { HighlightDirective } from './directives/highlight.directive';
 import { NgElseDirective } from './directives/ng-else.directive';
 import { PipesExamplesComponent } from './pipes-examples/pipes-examples.component';
+import { CamelCasePipe } from './pipes/camel-case.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PipesExamplesComponent } from './pipes-examples/pipes-examples.componen
     HighlightMouseDirective,
     HighlightDirective,
     NgElseDirective,
-    PipesExamplesComponent
+    PipesExamplesComponent,
+    CamelCasePipe
   ],
   imports: [
     BrowserModule,
