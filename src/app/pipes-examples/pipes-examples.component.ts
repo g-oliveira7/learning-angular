@@ -20,8 +20,8 @@ export class PipesExamplesComponent {
 
   filtro: string = '';
 
-  asyncValue = new  Promise((resolve, reject) => {
-    setTimeout(() =>  resolve('Valor assíncrono depois de 3 segundos'), 3000);
+  asyncValue = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Valor assíncrono depois de 3 segundos'), 3000);
   })
 
   asyncValue2 = new Observable(observer => {
@@ -40,6 +40,7 @@ export class PipesExamplesComponent {
       return this.cursos
     }
 
-    return this.cursos.filter(curso => curso.indexOf(this.filtro) != -1)
+    return this.cursos.filter(curso => curso.toLocaleLowerCase()
+      .indexOf(this.filtro.toLocaleLowerCase()) != -1)
   }
 }
