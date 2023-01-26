@@ -54,3 +54,17 @@
         <li *ngFor="let c of getCursos()">{{ c }}</li>
     </ul>
 </section>
+
+<section>
+    <h3>Async pipe</h3>
+
+    <p *ngIf="asyncValue | async; else loading">{{ asyncValue | async }}</p>
+
+    <p *ngIf="asyncValue2 | async; else loading">{{ asyncValue2 | async }}</p>
+
+    <ng-template #loading>
+        <div class="d-block spinner-border text-primary" role="status">
+            <span class="sr-only"></span>
+        </div>
+    </ng-template>
+</section>

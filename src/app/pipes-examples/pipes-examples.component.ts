@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { map, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-pipes-examples',
@@ -18,6 +19,17 @@ export class PipesExamplesComponent {
   cursos = ['Angular', 'Java', 'Python'];
 
   filtro: string = '';
+
+  asyncValue = new  Promise((resolve, reject) => {
+    setTimeout(() =>  resolve('Valor assíncrono depois de 3 segundos'), 3000);
+  })
+
+  asyncValue2 = new Observable(observer => {
+    setTimeout(() => {
+      observer.next('Valor assíncrono depois completo')
+      observer.complete()
+    }, 3000);
+  })
 
   addCource(courseName: string): void {
     this.cursos.push(courseName)
