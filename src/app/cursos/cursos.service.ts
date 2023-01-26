@@ -3,9 +3,13 @@ import { Injectable } from '@angular/core';
 @Injectable() // or @Injectable({ providedIn: 'root' })
 export class CursosService {
 
-  constructor() { }
+  private cursos = ['Java', 'Ext JS', 'Angular'];
 
   getCursos(): string[] {
-    return ['Java', 'Ext JS', 'Angular'];
+    return this.cursos
+  }
+
+  addCurso(curso: string) {
+    this.cursos.push(curso)
   }
 }

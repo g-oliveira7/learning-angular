@@ -14,8 +14,5 @@ export class NgElseDirective {
     }
   }
 
- constructor(private _templateRef: TemplateRef<any>, private _viewContainerRef: ViewContainerRef) {
-  console.log(this._templateRef)
-  console.log(this._viewContainerRef)
- }
+  constructor(private _templateRef: TemplateRef<any>, private _viewContainerRef: ViewContainerRef) { }
 }

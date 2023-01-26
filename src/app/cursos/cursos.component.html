@@ -11,6 +11,9 @@
                 <app-curso [nome]="curso"></app-curso>
             </li>
         </ul>
+
+        <input placeholder="Nome novo curso" #inputCurso>
+        <button class="btn btn-success" (click)="addCurso(inputCurso)">Add curso</button>
     </article>
 </section>
 
