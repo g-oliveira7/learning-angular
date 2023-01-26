@@ -20,6 +20,7 @@ import { CamelCasePipe } from './pipes/camel-case.pipe';
 import { registerLocaleData } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ArrayFilterPipe } from './pipes/array-filter.pipe';
+import { ArrayFilterImpurePipe } from './pipes/array-filter-impure.pipe';
 
 registerLocaleData(localePt)
 
@@ -38,7 +39,8 @@ registerLocaleData(localePt)
     NgElseDirective,
     PipesExamplesComponent,
     CamelCasePipe,
-    ArrayFilterPipe
+    ArrayFilterPipe,
+    ArrayFilterImpurePipe
   ],
   imports: [
     BrowserModule,

@@ -36,3 +36,12 @@
         <li *ngFor="let c of cursos | arrayFilter:filtro">{{ c }}</li>
     </ul>
 </section>
+
+<section>
+    <h3>Pipe Array Filter (impure)</h3>
+    <hr>
+
+    <ul>
+        <li *ngFor="let c of cursos | arrayFilterImpure:filtro">{{ c }}</li>
+    </ul>
+</section>
