@@ -4,7 +4,7 @@
     <ul>
         <li>Nome: {{ livro?.nome | uppercase | camelCase }}</li>
         <li>Editora: {{ livro?.editora }}</li>
-        <li>Data: {{ livro?.data | date:'dd/MM/yyyy' }}</li>
+        <li>Data: {{ livro?.data | date }}</li>
         <li>Páginas: {{ livro?.paginas | number }}</li>
         <li>Avaliação: {{ livro?.avaliacao | number:'1.1-1' }}</li>
         <li>Preço: {{ livro?.preco | currency:'BRL':'R$ ' }}</li>

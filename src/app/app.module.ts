@@ -1,5 +1,6 @@
 import { CursosModule } from './cursos/cursos.module';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
+import localePt from '@angular/common/locales/pt' 
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -16,6 +17,9 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { NgElseDirective } from './directives/ng-else.directive';
 import { PipesExamplesComponent } from './pipes-examples/pipes-examples.component';
 import { CamelCasePipe } from './pipes/camel-case.pipe';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localePt)
 
 @NgModule({
   declarations: [
@@ -39,7 +43,9 @@ import { CamelCasePipe } from './pipes/camel-case.pipe';
     NgbModule,
     NgbNavModule
   ],
-  providers: [],
+  providers: [
+    {provide: LOCALE_ID, useValue: 'pt'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
