@@ -18,6 +18,8 @@ import { NgElseDirective } from './directives/ng-else.directive';
 import { PipesExamplesComponent } from './pipes-examples/pipes-examples.component';
 import { CamelCasePipe } from './pipes/camel-case.pipe';
 import { registerLocaleData } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { ArrayFilterPipe } from './pipes/array-filter.pipe';
 
 registerLocaleData(localePt)
 
@@ -35,13 +37,15 @@ registerLocaleData(localePt)
     HighlightDirective,
     NgElseDirective,
     PipesExamplesComponent,
-    CamelCasePipe
+    CamelCasePipe,
+    ArrayFilterPipe
   ],
   imports: [
     BrowserModule,
     CursosModule,
     NgbModule,
-    NgbNavModule
+    NgbNavModule,
+    FormsModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt'}

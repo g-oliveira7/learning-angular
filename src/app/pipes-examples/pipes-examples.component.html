@@ -12,3 +12,27 @@
 
     <p>Livro: {{ livro | json }}</p>
 </section>
+
+<section>
+    <h3>Pipe Array Filter (pure)</h3>
+    <div class="my-2">
+        <label for="filter">Filter</label>
+        <input class="form-control" [(ngModel)]="filtro" id="filter">
+    </div>
+
+    <hr>
+
+    <div class="my-2">
+        <label for="add">Add course</label>
+        <div class="d-flex gap-2">
+            <input class="form-control" id="add" #course>
+            <button class="btn btn-success" (click)="addCource(course.value)">Add</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <ul>
+        <li *ngFor="let c of cursos | arrayFilter:filtro">{{ c }}</li>
+    </ul>
+</section>

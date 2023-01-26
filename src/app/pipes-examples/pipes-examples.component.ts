@@ -14,4 +14,12 @@ export class PipesExamplesComponent {
     avaliacao: 4.81234,
     preco: 4400.90
   };
+
+  cursos = ['Angular', 'Java', 'Python'];
+
+  filtro: string = '';
+
+  addCource(courseName: string): void {
+    this.cursos.push(courseName)
+  }
 }
