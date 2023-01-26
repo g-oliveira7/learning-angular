@@ -14,6 +14,7 @@ import { YellowBackgroundDirective } from './directives/yellow-background.direct
 import { HighlightMouseDirective} from './directives/highlight-mouse.directive';
 import { HighlightDirective } from './directives/highlight.directive';
 import { NgElseDirective } from './directives/ng-else.directive';
+import { PipesExamplesComponent } from './pipes-examples/pipes-examples.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NgElseDirective } from './directives/ng-else.directive';
     YellowBackgroundDirective,
     HighlightMouseDirective,
     HighlightDirective,
-    NgElseDirective
+    NgElseDirective,
+    PipesExamplesComponent
   ],
   imports: [
     BrowserModule,

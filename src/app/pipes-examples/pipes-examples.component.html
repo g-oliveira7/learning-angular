@@ -1,0 +1,14 @@
+<section>
+    <h3>Object exibition</h3>
+
+    <ul>
+        <li>Nome: {{ livro?.nome | uppercase }}</li>
+        <li>Editora: {{ livro?.editora }}</li>
+        <li>Data: {{ livro?.data | date:'dd/MM/yyyy' }}</li>
+        <li>Páginas: {{ livro?.paginas | number }}</li>
+        <li>Avaliação: {{ livro?.avaliacao | number:'1.1-1' }}</li>
+        <li>Preço: {{ livro?.preco | currency:'BRL':'R$ ' }}</li>
+    </ul>
+
+    <p>Livro: {{ livro | json }}</p>
+</section>
